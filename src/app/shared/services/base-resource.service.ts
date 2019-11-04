@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import { map, catchError } from "rxjs/operators";
 import { Injector } from '@angular/core';
+import { element } from 'protractor';
 
 export abstract class BaseResourceService<T extends BaseResourceModel > {
 
@@ -66,7 +67,7 @@ export abstract class BaseResourceService<T extends BaseResourceModel > {
         const resources: T[] = [];
         jsonData.forEach(
             element => resources.push(this.jsonDataToResourceFn(element))
-        );
+            );
         return resources;
     }
 
