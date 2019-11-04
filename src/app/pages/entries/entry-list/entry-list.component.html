@@ -2,18 +2,9 @@
     [items]="[{text: 'Lançamentos'}]" >
 </app-bread-crumb>
 
-<div class="row mb-4">
-    <div class="col-md">
-        <h1 class="h2 border-left pl-2">
-            Lan&ccedil;amentos
-        </h1>
-    </div>
-    <div class="col-md">
-        <a routerLink="new" class="btn btn-success float-right">
-            + Novo Lan&ccedil;amento
-        </a>
-    </div>
-</div>
+<app-page-header
+    page-title="Lan&ccedil;amentos" button-text="+ Novo Lan&ccedil;amento" button-link="new" button-class="btn-success"
+></app-page-header>
 
 <table class="table table-hover">
     <thead>
